@@ -65,14 +65,6 @@ The frontend will run on http://localhost:5173
    - Switch between sheets using tabs
    - Scroll to load more rows (for large files)
 
-## Demo
-
-Run the interactive demo script:
-```bash
-./demo-script.sh
-```
-
-This will guide you through all features and demonstrate the API endpoints.
 
 ## Architecture
 
@@ -83,8 +75,6 @@ The application follows a client-server architecture:
 - **File Processing**: XLSX library for Excel parsing
 - **Caching**: In-memory cache with 30-minute TTL
 
-See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed system design.
-
 ## API Documentation
 
 The backend provides RESTful APIs for file comparison and data pagination.
@@ -92,8 +82,6 @@ The backend provides RESTful APIs for file comparison and data pagination.
 Key endpoints:
 - `POST /api/excel/compare` - Compare two Excel files
 - `GET /api/excel/data` - Get paginated data for large files
-
-See [API_DOCUMENTATION.md](./API_DOCUMENTATION.md) for complete API reference.
 
 ## Project Structure
 
@@ -113,27 +101,9 @@ excel-compare/
 │   │   ├── routes/         # API routes
 │   │   └── types/          # TypeScript types
 │   └── package.json
-├── test_file1.xlsx         # Sample test file
-├── test_file2.xlsx         # Sample test file
-├── paginated_test_file1.xlsx  # Large test file
-├── paginated_test_file2.xlsx  # Large test file
-├── ARCHITECTURE.md         # System architecture
-├── API_DOCUMENTATION.md    # API reference
-├── demo-script.sh          # Interactive demo
 └── README.md              # This file
 ```
 
-## Test Files
-
-The project includes test files for demonstration:
-
-1. **Basic comparison**: `test_file1.xlsx` and `test_file2.xlsx`
-   - Small files with sales data
-   - Good for basic functionality testing
-
-2. **Large file handling**: `paginated_test_file1.xlsx` and `paginated_test_file2.xlsx`
-   - 1000+ rows × 50 columns
-   - Demonstrates pagination and performance
 
 ## Development
 
